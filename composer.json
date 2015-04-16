@@ -1,0 +1,7 @@
+{
+    "name": "niimai/humbug-demo",
+    "description": "Mutation Tsting Demo",
+    "autoload": {
+        "psr-0": {"": ["app/"]}
+    }
+}

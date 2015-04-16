@@ -1,0 +1,17 @@
+{
+    "chdir": "tests/",
+    "timeout": 10,
+    "source": {
+        "directories": [
+            "app"
+        ],
+        "excludes": [
+            "tests"
+        ]
+    },
+    "logs": {
+        "text": "humbuglog.txt",
+        "json": "humbuglog.json"
+    }
+}
+

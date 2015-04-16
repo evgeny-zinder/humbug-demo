@@ -1,0 +1,39 @@
+Humbug running test suite to generate logs and code coverage data...
+Humbug has completed the initial test run successfully.
+Tests: 2 Line Coverage: 75.00%
+Humbug is analysing source files...
+Mutation Testing is commencing on 1 files...
+(.: killed, M: escaped, S: uncovered, E: fatal error, T: timed out)
+...M
+4 mutations were generated:
+       3 mutants were killed
+       0 mutants were not covered by tests
+       1 covered mutants were not detected
+       0 fatal errors were encountered
+       0 time outs were encountered
+
+Out of 4 test covered mutations, 75% were detected.
+Out of 4 total mutations, 75% were detected.
+Out of 4 total mutations, 100% were covered by tests.
+
+Remember that some mutants will inevitably be harmless (i.e. false positives).
+Time: 409 milliseconds Memory: 7.00MB
+Humbug results are being logged as JSON to: humbuglog.json
+Humbug results are being logged as TEXT to: humbuglog.txt
+------
+Escapes
+------
+
+
+1) \Humbug\Mutator\Arithmetic\Division
+Diff on \Calculator::div() in /Users/niimai/Projects/demo/app/Calculator.php:
+--- Original
++++ New
+@@ @@
+         }
+-        return $a / $b;
++        return $a * $b;
+     }
+ }
+
+

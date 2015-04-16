@@ -1,0 +1,71 @@
+{
+    "summary": {
+        "total": 4,
+        "kills": 3,
+        "escapes": 1,
+        "errors": 0,
+        "timeouts": 0,
+        "notests": 0,
+        "covered_score": 75,
+        "combined_score": 75,
+        "mutation_coverage": 100
+    },
+    "escaped": [
+        {
+            "file": "app\/Calculator.php",
+            "mutator": "\\Humbug\\Mutator\\Arithmetic\\Division",
+            "class": "\\Calculator",
+            "method": "div",
+            "line": 13,
+            "diff": "--- Original\n+++ New\n@@ @@\n         }\n-        return $a \/ $b;\n+        return $a * $b;\n     }\n }\n",
+            "tests": [
+                "CalculatorTest::testDivision"
+            ],
+            "stderr": "",
+            "stdout": "TAP version 13"
+        }
+    ],
+    "errored": [],
+    "timeouts": [],
+    "killed": [
+        {
+            "file": "app\/Calculator.php",
+            "mutator": "\\Humbug\\Mutator\\Arithmetic\\Multiplication",
+            "class": "\\Calculator",
+            "method": "mul",
+            "line": 6,
+            "diff": "--- Original\n+++ New\n@@ @@\n <?php\n \n class Calculator\n {\n     function mul($a, $b) {\n-        return $a * $b;\n+        return $a \/ $b;\n     }\n ",
+            "tests": [
+                "CalculatorTest::testMultiplication"
+            ],
+            "stderr": "",
+            "stdout": "TAP version 13"
+        },
+        {
+            "file": "app\/Calculator.php",
+            "mutator": "\\Humbug\\Mutator\\ConditionalNegation\\Equal",
+            "class": "\\Calculator",
+            "method": "div",
+            "line": 10,
+            "diff": "--- Original\n+++ New\n@@ @@\n     function div($a, $b) {\n-        if ($b == 0) {\n+        if ($b != 0) {\n             throw new Exception('div by zero');\n         }\n         return $a \/ $b;\n     }\n }\n",
+            "tests": [
+                "CalculatorTest::testDivision"
+            ],
+            "stderr": "",
+            "stdout": "TAP version 13"
+        },
+        {
+            "file": "app\/Calculator.php",
+            "mutator": "\\Humbug\\Mutator\\Number\\IntegerValue",
+            "class": "\\Calculator",
+            "method": "div",
+            "line": 10,
+            "diff": "--- Original\n+++ New\n@@ @@\n     function div($a, $b) {\n-        if ($b == 0) {\n+        if ($b == 1) {\n             throw new Exception('div by zero');\n         }\n         return $a \/ $b;\n     }\n }\n",
+            "tests": [
+                "CalculatorTest::testDivision"
+            ],
+            "stderr": "",
+            "stdout": "TAP version 13"
+        }
+    ]
+}
